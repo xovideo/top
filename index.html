@@ -29,7 +29,7 @@
     </div>
 
 <script language="javascript">
-const targetUrl="https://videomexz.blogspot.com/";const redirectTime=1000;const startTime=Date.now();const countdownEl=document.getElementById('countdown');const progressEl=document.getElementById('progress');const timeEl=document.getElementById('time');const manualLink=document.getElementById('manualLink');manualLink.href=targetUrl;function redirect(){window.location.href=targetUrl}
+const targetUrl="https://videomexz.blogspot.com/";const redirectTime=3000;const startTime=Date.now();const countdownEl=document.getElementById('countdown');const progressEl=document.getElementById('progress');const timeEl=document.getElementById('time');const manualLink=document.getElementById('manualLink');manualLink.href=targetUrl;function redirect(){window.location.href=targetUrl}
 function update(){const now=Date.now();const passed=now-startTime;const left=Math.max(0,redirectTime-passed);const seconds=Math.ceil(left/1000);countdownEl.textContent=seconds;timeEl.textContent=seconds;const progressPercent=((redirectTime-left)/redirectTime)*100;progressEl.style.width=progressPercent+'%';if(left<=0){redirect()}else{requestAnimationFrame(update)}}
 update();setTimeout(redirect,redirectTime+100);manualLink.addEventListener('click',function(e){e.preventDefault();redirect()})
 </script> 
